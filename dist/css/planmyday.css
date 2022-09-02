@@ -90,6 +90,7 @@ input, select, textarea {
   padding: 0 10px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-appearance: none;
 }
 
 * {
@@ -605,6 +606,7 @@ figure.fullwidth iframe {
 .date-maps {
   background-image: url("../../src/images/ornaments/pmd_ornflower02.svg");
   background-position: left center;
+  overflow: hidden;
 }
 
 .date-maps .pmday-button {
@@ -867,6 +869,10 @@ footer a {
   padding: 15px 20px;
   margin-top: 30px;
   cursor: pointer;
+}
+
+.popup-opening picture img {
+  max-width: 150px;
 }
 
 #control-music {

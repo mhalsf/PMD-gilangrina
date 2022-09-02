@@ -354,7 +354,7 @@ figure.fullwidth {
 .date-maps {
     background-image: url("../../src/images/ornaments/pmd_ornflower02.svg");
     background-position: left center;
-
+    overflow: hidden;
 
     .pmday-button{
         margin-top: 30px;
@@ -558,6 +558,9 @@ footer {
         padding: 15px 20px;
         margin-top: 30px;
         cursor: pointer;
+    }
+    picture img {
+        max-width: 150px;
     }
 }
 
