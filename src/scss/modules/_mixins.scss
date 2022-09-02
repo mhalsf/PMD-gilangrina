@@ -1,0 +1,76 @@
+// ================================= MIXIN ================================ //
+@mixin section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} 
+@mixin titlelatin ($fontSize: 30px, $color: $greyColor){
+    font-family: 'AphroditeSlimText';
+    font-size: $fontSize;
+    color: $color;
+    font-weight: 400;
+}
+@mixin mainTitle ($fontSize: 16px){
+    font-family: 'Montserrat', sans-serif;
+    font-size: $fontSize;
+    color: #363636;
+    font-weight: 700;
+}
+@mixin dividerRight ($line: right, $color: #fff){
+    background-image: linear-gradient(to $line, $color, rgba(255, 248, 248, 0) 100%, transparent);
+}
+@mixin dividerLeft ($line: right, $color: #fff){
+    background-image: linear-gradient(to $line, transparent, rgba(255, 255, 255, 0) 0%, $color);
+}
+
+@mixin dividerCart($height: 90%, $width: 90%) {
+    content: "";
+    height: $height;
+    width: $width;
+    display: block;
+    position: absolute;
+}
+@mixin subTitle ($size: 16px, $color: #363636){
+    font-size: $size;
+    font-family: 'Montserrat', sans-serif;
+    color: $color;
+    font-weight: 700;
+}
+@mixin sectionCenter {
+    max-width: 830px;
+    margin: auto;
+    text-align: center;
+    width: 80%;
+}
+@mixin normalText ($align: justify){
+    margin-top: 10px;
+    color: $greyColor;
+    font-size: 12px;
+    text-align: justify;
+    letter-spacing: 0.02em;
+    line-height: 1.5em;
+}
+@mixin contentFlex {
+    display: flex;
+    gap: 35px;
+}
+@mixin phone {
+    @media only screen and (max-width: 767px) { @content; }
+}
+@mixin desktop {
+    @media only screen and (min-width: 768px) { @content; }
+}
+// ====================================== ANIMATION =========================================== //
+@-moz-keyframes spin { 
+    100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+    100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}

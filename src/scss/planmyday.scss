@@ -1,211 +1,15 @@
-//  ======================= Reset style ============================= //
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-    vertical-align: baseline;
-    font-family: inherit;
-    color: inherit;
-}
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-    line-height: 1;
-    font-family: 'now regular';
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-p {
-    font-size: 15px;
-}
-section {
-    padding: 100px 0 70px;
-}
-input, select, textarea {
-    min-height: 40px;
-    background: #FEFEFE;
-    border: 1px solid #989898;
-    width: 100%;
-    padding: 0 10px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-         box-sizing: border-box;
+@import 'modules/fonts', 'modules/variable', 'modules/mixins', 'modules/general';
 
-}
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-         box-sizing: border-box;
-}
-// ================================= Font ================================= //
-@font-face {
-    font-family: 'AphroditeSlimText';
-    src: url('../../src/fonts/aphrodite/aphrodite_slim_text.woff2') format('woff2'),
-         url('....//src/fonts/aphrodite/aphrodite_slim_text.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-@font-face {
-    font-family: 'now medium';
-    src: url('../../src/fonts/now/now-medium.woff2') format('woff2'),
-         url('../../src/fonts/now/now-medium.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-@font-face {
-    font-family: 'now regular';
-    src: url('../../src/fonts/now/now-regular.woff2') format('woff2'),
-         url('../../src/fonts/now/now-regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-// ================================= Variable ============================= //
-$mainColor: #4E5C46;
-$secondColor: #869554;
-$greenAlt: #89A58F;
-$greyColor: #4D4D4D;
-
-// ================================= MIXIN ================================ //
-@mixin section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-} 
-@mixin titlelatin ($fontSize: 30px, $color: $greyColor){
-    font-family: 'AphroditeSlimText';
-    font-size: $fontSize;
-    color: $color;
-    font-weight: 400;
-}
-@mixin dividerRight ($line: right, $color: #fff){
-    background-image: linear-gradient(to $line, $color, rgba(255, 248, 248, 0) 100%, transparent);
-}
-@mixin dividerLeft ($line: right, $color: #fff){
-    background-image: linear-gradient(to $line, transparent, rgba(255, 255, 255, 0) 0%, $color);
-}
-
-@mixin dividerCart($height: 90%, $width: 90%) {
-    content: "";
-    height: $height;
-    width: $width;
-    display: block;
-    position: absolute;
-}
-@mixin subTitle ($size: 35px, $transform: uppercase){
-    font-size: $size;
-    font-family: 'now medium';
-    text-transform: $transform;
-}
-@mixin sectionCenter {
-    max-width: 830px;
-    margin: auto;
-    text-align: center;
-    width: 80%;
-}
-@mixin ornWrapper {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    min-height: 20px;
-    max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    text-align: center;
-}
-@mixin ornFlower ($width: 100%, $left: 0, $top: 0){
-    opacity: .6;
-    position: absolute;
-    width: $width;
-    left: $left;
-    top: $top;
-}
-@mixin normalText ($align: justify){
-    margin-top: 10px;
-    color: $greyColor;
-    font-size: 12px;
-    text-align: justify;
-    letter-spacing: 0.02em;
-    line-height: 1.5em;
-}
-@mixin contentFlex {
-    display: flex;
-    gap: 35px;
-}
-@mixin bullet ($right: -12px){
-    content: "";
-    display: block;
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background: $greenAlt;     
-    right: $right;
-    top: 0px;
-    border-radius: 50%;
-}
-@mixin phone {
-    @media only screen and (max-width: 767px) { @content; }
-}
-@mixin desktop {
-    @media only screen and (min-width: 768px) { @content; }
-}
-// ====================================== ANIMATION =========================================== //
-@-moz-keyframes spin { 
-    100% { -moz-transform: rotate(360deg); } 
-}
-@-webkit-keyframes spin { 
-    100% { -webkit-transform: rotate(360deg); } 
-}
-@keyframes spin { 
-    100% { 
-        -webkit-transform: rotate(360deg); 
-        transform:rotate(360deg); 
-    } 
-}
 //  ===================================== PLAN MY DAY =========================================== //
 .fixed-body {
     position: fixed;
 }
 header {
-    display: none;
     nav {
         position: fixed;
         z-index: 9;
         background: $mainColor;
-        width: 90%;
+        width: 85%;
         left: 0;
         right: 0;
         margin: auto;
@@ -240,38 +44,8 @@ header {
         }
     }
 }
-.flexbin {
-    display: flex;
-    overflow: hidden;
-    flex-wrap: wrap;
-    margin: -2.5px;
-
-    &::after {
-        content: '';
-        flex-grow: 999999999;
-        min-width: 300px;
-        height: 0
-    }
-
-    & > * {
-        position: relative;
-        display: block;
-        height: 300px;
-        margin: 2.5px;
-        flex-grow: 1;
-
-        & > img{
-            height: 300px;
-            object-fit: cover;
-            max-width: 100%;
-            min-width: 100%;
-            vertical-align: bottom;
-        }
-    }
-
-    &.flexbin-margin {
-        margin: 2.5px;
-    }
+.title {
+    @include mainTitle();
 }
 .pmday-button {
     background-color: $secondColor;
@@ -300,52 +74,19 @@ figure.fullwidth {
     width: 80%;
     max-width: 1440px;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 80px;
     border: 2px solid $greyColor;
-    padding: 15px;
+    padding: 5px;
 
     iframe {
         width: 100%;
-    }
-}
-._single {
-    position: relative;
-    
-    .pmd-ornament-flower {
-        @include ornWrapper();
-        
-        .orm-pmd__flower-01 {
-            @include ornFlower(50%, 40%, 22px);
-            max-width: 530px;
-        }
-
-        .orm-pmd__flower-02 {
-            @include ornFlower(350px, 20%, 400px);
-        }
-    }
-}
-._twin {
-    .pmd-ornament-flower {
-        @include ornWrapper();
-        margin-top: 50px;
-
-        .orm-pmd__flower-01 {
-            @include ornFlower(331px, 8%, 60%);
-        }
-        .orm-pmd__flower-03 {
-            @include ornFlower(170px, 76%, 40%);
-        }
-        .orm-pmd__flower-02 {
-            @include ornFlower(70%, 0, 100px);
-            position: relative;
-        }
     }
 }
 .divider-wrapper {
     display: table; 
     font-size: 15px;  
     width: 60%;
-    margin: 20px auto;
+    margin: 15px auto;
     
     & > * {
         display: table-cell; position: relative;
@@ -366,11 +107,11 @@ figure.fullwidth {
         background-repeat: no-repeat;
 
         &.left {
-            @include dividerLeft(left, #86955466);
+            @include dividerLeft(left, #C4C4C4);
         }
 
         &.right {
-            @include dividerRight(left, #86955466);
+            @include dividerRight(left, #C4C4C4);
         }
     }
     &.white {
@@ -393,26 +134,8 @@ figure.fullwidth {
     } 
 
 }
-.pmd_copy-btn {
-    background: none;
-    cursor: copy;
-    border: none;
-    font-size: 12px;
-    color: #212121;
-    margin: 20px auto;
-    
-    &::before {
-        content: "";
-        width: 14px;
-        height: 14px;
-        vertical-align: sub;
-        display: inline-block;
-        margin-right: 5px;
-        background-image: url('../../src/images/icons/copy.svg');
-    }
-}
 .card {
-    width: 90%;
+    width: 100%;
     max-width: 450px;
     margin: auto;
     background-color: #fff;
@@ -436,13 +159,13 @@ figure.fullwidth {
         &.reverse {
             &::before {
                 @include dividerLeft(bottom, $secondColor);
-                right: 25px;
-                bottom: 25px;
+                right: 15px;
+                bottom: 15px;
             }
             &::after {
                 @include dividerRight(left, $secondColor);
-                right: 30px;
-                bottom: 25px;
+                right: 20px;
+                bottom: 15px;
             }
 
         }
@@ -454,8 +177,8 @@ figure.fullwidth {
         flex-direction: column;
 
         h1 {
-            @include titlelatin(30px, $greyColor);
-            margin-top: 50px;
+            @include titlelatin(23px, $greyColor);
+            margin-top: 45px;
         }
 
         h2 {
@@ -464,12 +187,28 @@ figure.fullwidth {
         }
 
         .details {
-            color: #212121;
+            color: $blackColor;
             text-align: center;
-            margin: 25px auto 45px;
+            margin: 15px auto 25px;
+            figure {
+                margin: 15px 0 30px;
+                @include section();
+                gap: 5px;
+                flex-direction: row;
 
+                figcaption {
+                    @include subTitle(14px);
+                }
+
+                & + p {
+                    font-size: 13px;
+                    font-weight: 400;
+                }
+            }
             p {
                 line-height: 1.5em;
+                @include subTitle(14px);
+                padding: 0 5px;
             }
         }
     }
@@ -479,49 +218,70 @@ figure.fullwidth {
     font-weight: 400;
     font-size: 12px;
     max-width: 600px;
-    margin: 40px auto 75px;
+    margin: 20px auto 35px;
     color: #363636;
-    line-height: 1.2;
+    line-height: 1.5;
 }
-.hero {
+.hero,
+.popup-opening {
     @include section();
-
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../src/images/hero.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    padding: 150px 0;
-    color: #fff;
-
+    background-image: url("../../src/images/ornaments/pmd_ornflower01.svg"), url("../../src/images/ornaments/pmd_ornflower02.svg");
+    background-position: right bottom, left top;
     * {
         text-align: center;
     }
+    .center-content {
+        width: 60%;
+    }
+    .ring-hero {
+        img {
+            width: 60px;
+        }
+        figcaption {
+            @include subTitle(16px, $mainColor);
+            letter-spacing: .5px;
+            margin: 20px auto;
+        }
+    }
+    picture img{
+        max-width: 100%;
+        width: 100%;
+    }
     .title {
-        @include titlelatin(60px, #FFF);
-
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
+        @include titlelatin(22px, $blackColor);
         display: block;
-        margin-bottom: 30px;
+        margin: 22px auto 30px;
         line-height: 1.5;
     }
     .countdown {
+        width: 100%;
+        margin: 60px auto 30px;
+        display: grid;
+        gap: 3%;
+        grid-template-columns: 23% 23% 23% 23%;
+        justify-content: center;
+            
         li {
             display: inline-block;
-            margin: 0 10px;
             background: $mainColor;
-            padding: 25px 30px 30px;
-            border-radius: 20px;
+            padding: 15px 0;
+            margin: 0;
+            border-radius: 5px;
 
             .time {
-                @include titlelatin(60px, #fff);
+                @include titlelatin(22px, #fff);
             }
             .desc {
                 text-transform: uppercase;
-                font-size: 12px;
-                margin-top: 4px;
+                font-size: 8px;
+                margin: 10px 0 2px;
+                color: #fff;
             }
         }
+    }
+    .subtitle-date {
+        @include subTitle(14px, $blackColor);
+        margin-bottom: 100px;
     }
 
 }
@@ -534,179 +294,102 @@ figure.fullwidth {
     }
 }
 .couple {
+    padding-bottom: 30px;
     @include section();
-    background-image: url("../../src/images/ornaments/pmday_orn-bg.png");
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: auto;
-  
-
+    background-image: url("../../src/images/ornaments/pmd_ornflower01.svg");
+    background-position: right bottom;
     .content {
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 100%;
         padding: 10px;  
         
         .grid-profile__name {
-            background: #89A58F33;
-            text-align: left;
-            padding: 40px;
+            text-align: center;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            
-            h1 {
-                @include titlelatin (25px,#212121);
-                word-spacing: 10px;
+
+            &.groom {
+                margin-bottom: 40px;
             }
 
-            .divider-wrapper {
-                margin-left: 0;
-                .divider {
-                    height: 15px;
-                }
+            h1 {
+                @include mainTitle(15px);
+                margin: 10px 0 5px;
             }
 
             p {
                 @include normalText();
+                text-align: center;
             }
 
             .social-icons {
-                margin-top: 30px;
+                margin:15px 0;
 
                 li {
                     display: inline-block;
 
-                    img {
-                        opacity: .5;
+                    a {
+                        font-size: 12px;
+                        text-decoration: none;
+                        color: #4D4D4D;
+
+                        img {
+                            opacity: .5;
+                            vertical-align: sub;
+                            margin-right: 5px;
+                        }
                     }
                 }
             }
         }
         .grid-profile__photo {
             img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
+                width: 60%;
+                height: auto;
             }
         }
     }
 }
 .date-maps {
-    position: relative;
+    background-image: url("../../src/images/ornaments/pmd_ornflower02.svg");
+    background-position: left center;
 
-    .content {
-        @include contentFlex();
-    }
+
     .pmday-button{
         margin-top: 30px;
         max-width: 50%;
-    }
-}
-.story {
-    .content {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        background-color: #fff;
-        box-shadow: 5px 10px 35px 5px rgba(0, 0, 0, 0.1);
-        padding: 90px 0;
 
-        .story-content  {
-            text-align: right;
-            padding: 0px 35px 50px 60px;
-
-            &._right {
-                text-align: left;
-                padding: 0px 60px 50px 35px;
-            }
-        }
-
-        .story__photo {
-            @include section();
-            
-            &:not(.first)::before {
-                @include dividerRight(right, $greenAlt);
-                @include dividerCart(4px, 45%);
-                top: 10px;
-                left: 35px;
-            }
-
-            &.second::before {
-                @include dividerRight(left, $greenAlt);
-                @include dividerCart(4px, 45%);
-                right: 35px;
-                left: unset;            
-            }
-        }
-        & > div {
-            position: relative;
-            
-            &:nth-child(odd){
-                border-right: 2px solid $greenAlt;
-    
-                &::after {
-                    @include bullet();
-                }
-            }
-        }
-        h1 {
-            @include titlelatin(18px , $greenAlt);
-            margin-bottom: 10px;
-        }
-        h2 {
-            font-size: 22px;
-            color: $greyColor;
-            margin-bottom: 15px;
-        }
-        p {
-            @include normalText();
+        img {
+            filter: brightness(0) invert(1);
         }
     }
-}
-.gallery {
-    .content {
-        max-width: 1440px;
-        width: 100%;
-    }
-    .teaser-divider {
-        margin-top: 100px;
-
-        p {
-            font-size: 20px;
-            color: #000;
-        }
-    }
-    .teaser {
-        margin-top: 50px;
-    }
-}
-.gift {
-    position: relative;
-
     .content {
         @include contentFlex();
+        flex-direction: column;
+        gap: 15px;
+    }
+    .card {
+        width: 100%;
+        max-width: 400px;
+        padding: 18px 18px 30px;
+    }
+    
+    .pmd-ornament-flower {
+        height: 100%;
+        max-width: 400px;            
+    }
 
-        .icon-title {
-            margin-top: 30px;
-        }
-
-        .details {
-            padding: 15px;
-            margin: 0;
-
-            p {
-                @include subTitle(18px, capitalize);
-
-                &.nametag {
-                    margin: 20px auto;
-                }
-            }
-        }
+    iframe {
+        max-height: 300px;
     }
 }
 .protocols {
+    background: $bgColor;
+
     .content {
         display: grid;
-        grid-template-columns: 30% 30% 30%;
+        grid-template-columns: 40% 40%;
         justify-content: center;
         row-gap: 30px;
         background-color: #fff;
@@ -721,24 +404,30 @@ figure.fullwidth {
             justify-content: space-between;
             padding: 0 15px;
 
-            &:first-child figcaption {
+            img  {
+                width: 100%;
+            }
+
+
+            figcaption {
+                font-size: 13px;
                 margin-top: 15px;
             }
         }
     }
 }
 .ar-rum {
-    background: $greenAlt;
+    background: url('../../src/images/ornaments/pmd_ornflower02.svg') left bottom no-repeat $bgColor;
 
     h1 {
         font-weight: 100;
-        font-size: 20px;
-        margin-bottom: 35px;
-        line-height: 1.5;
+        font-size: 16px;
+        margin-bottom: 10px;
+        line-height: 2;
     }
     .sub-title {
-        line-height: 18px;
-        margin-bottom: 35px;
+        line-height: 2;
+        margin: 15px auto;
     }
 }
 .greeting {
@@ -753,19 +442,14 @@ figure.fullwidth {
             flex-wrap: wrap;
             flex-direction: row;
             gap: 30px;
-            padding: 70px 0;
+            padding: 45px 0;
 
             .form-group {
-                width: 50%;
-                width: calc(50% - (30px / 2));
-
+                width: 100%;
 
                 &.prayer-wrapper {
                     width: 100%;
                 }
-            }
-            select {
-                height: 100%;
             }
             button {
                 width: 100%;
@@ -789,62 +473,53 @@ figure.fullwidth {
                     border-radius: 10px;
                     text-align: left;
                     background: $greenAlt;
-                    margin-bottom: 1px;
+                    margin-bottom: 5px;
 
 
                     h2 {
                         margin-bottom: 5px;
-                        font-size: 22px;
+                        font-size: 15px;
                         text-transform: capitalize;
                     }
                     .greetcheck {
                         text-align: right;
-                        font-size: 12px;
+                        font-size: 10px;
+                        text-align: left;
+                        padding: 5px 0;
+                        border-bottom: 1px solid #fff;
                     }
                     .greettext {
                         margin: 10px 0;
+                        font-size: 13px;
                     }
                 }
             }
         }
     }
 }
-.minicard {
-    * {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-             box-sizing: border-box;
+.prefooter {
+    padding-top:0;
+    text-align: center;
+    background-image: url("../../src/images/ornaments/pmd_ornflower01.svg");
+    background-position: right center;
+    h1 {
+        @include titlelatin(25px, $greyColor);
+        margin: 25px auto;
     }
-    .card {
-        padding-bottom: 23px !important;
-        width: 350px;
-        .card-content {
-            padding: 20px;
-            
-            picture, img {
-                width: 100%;
-            }
-        }
-    }
-    .pmd-ornament-flower {
-        .orm-pmd__flower-01 {
-            width: 34%;
-        }
-        .orm-pmd__flower-02 {
-            top: 200px;
-        }
-    }
-    .thanks, .names {
-        @include titlelatin(80px, $greyColor);
-        text-align: center;
-        margin: 130px auto 50px;
+    p {
+        max-width: 80%;
+        margin-bottom: 0;
     }
 }
 footer {
-    padding: 30px 15px;
+    padding: 30px 15px 100px;
     text-align: center;
     background-color: $greenAlt;
     color: #fff;
+
+    * {
+        font-size: 12px;
+    }
 
     a {
         margin-top: 10px;
@@ -858,45 +533,26 @@ footer {
     height: 100%;
     position: fixed;
     z-index: 99;
-    background: #fff;
-    text-align: center;
+    background-repeat: no-repeat;
+    background-color: $bgColor;
 
-    .minicard {
-        padding: 50px 0 0;
-        width: 100%;
-
-        .card {
-            width: 250px;
-        }
-        .names {
-            margin-top: 75px;
-            font-size: 55px;
-            margin-bottom: 40px;
-        }
+    .center-content {
+        width: 70%;
+        color: $mainColor;
     }
-    .pmd-ornament-flower {
-        width: 250px;
 
-        .orm-pmd__flower-01 {
-            width: 100%;
-        }
-        .orm-pmd__flower-02 {
-            width: 80%;
-            top: 150px;
-            left: -55%;
-        }
-    }
-    h1 {
+    h1.title {
         font-size: 25px;
+        color: $mainColor;
     }
     p {
-        @include subTitle(20px, capitalize);
-        color: #363636;
+        font-size: 13px;
         margin: 20px 0;
+        line-height: 1.3;
     }
 
     h2 {
-        @include subTitle(35px, capitalize);
+        @include mainTitle(20px)
     }
     button {
         padding: 15px 20px;
@@ -908,17 +564,18 @@ footer {
 #control-music {
     position: fixed;
     z-index: 9;
-    width: 50px;
-    height: 50px;
-    left: 15px;
-    bottom: 15px;
+    width: 45px;
+    height: 45px;
     cursor: pointer;
+    bottom: 100px;
+    right: 15px;
 
 
     img {
         -webkit-animation:spin 4s linear infinite;
         -moz-animation:spin 4s linear infinite;
         animation:spin 4s linear infinite;
+        width: 100%;
     }
 
     &.paused {
@@ -934,403 +591,311 @@ footer {
             content: "";
             display: block;
             position: absolute;
-            width: 15px;
-            height: 30px;
-            top: 20%;
-            left: 25%;
+            width: 10px;
+            height: 25px;
+            top: 22%;
+            left: 28%;
         }
     }
 }
-.plan-my-day .lg-container  {
-    .lg-prev::after {
-        content: "<";
-    }
-    .lg-next::before{
-        content: ">";
-    }
-    .lg-close:after,
-    .lg-download::after {
-        content: "";
-        width: 30px;
-        height: 30px;
-        display: block;
-        background-image: url("../../src/images/icons/close.svg");
-        background-size: cover;
-    }
-    .lg-download::after {
-        background-image: url("../../src/images/icons/download.svg"); 
-    }
+.center-content {
+    max-width: 750px;
+    margin: auto;
 }
 //  ===================================== MOBILE =========================================== //
 .plan-my-day {
-    @include phone {
-        #opening {
-            .header {
-                img {
-                    width: 50px;
-                }
-                h1 {
-                    font-size: 18px;
-                }
-            }
-            .minicard {
-                width: 80%;
-                padding: 10px;
-                margin-top: 20px;
-        
-                .card {
-                    max-width: 150px;
-                }
-                .names {
-                    font-size: 30px;
-                    margin-top: 40px;
-                    margin-bottom: 25px;
-                }
-            }
-            .pmd-ornament-flower {
-                max-width: 150px;
-        
-                .orm-pmd__flower-01 {
-                    left: 50%;
-                    width: 100%;
-                }
-                .orm-pmd__flower-02 {
-                    width: 100%;
-                    top: 90px;
-                    left: -70%;
-                }
-            }
-            .guest {
-                margin-top: 25px;
+    @include desktop {
+        input, select, textarea {
+            font-size: 15px;
+        }
+        section {
+            padding: 100px 0;
+        }
+        header {
+            display: none;
+        }
+        .center-column > .header, 
+        .center-column > .content {
+            max-width: 750px;
+        }
+        .ar-rum,
+        .couple,
+        .date-maps  {
+            background-size: 15%;
+        }
+        .title {
+            @include mainTitle(30px);
+        }
+        .pmday-button {
+            font-size: 14px;
+            padding: 13px 20px;
+        }
+        .sub-title {
+            font-size: 15px;
+            margin: 30px auto 64px;
+        }
+        .divider-wrapper {
+            margin: 25px auto;
+        }
+        .popup-opening {
+            overflow: scroll;
+
+            .center-content {
+                max-width: 600px;
+                margin: 20px auto;
             }
             p {
-                font-size: 13px;
-                line-height: 1.4;
+                font-size: 17px;
+                margin: 30px 0;
             }
         
             h2 {
-                font-size: 25px;
+                @include mainTitle(30px)
             }
             button {
-                margin-top: 40px;
+                padding: 20px 30px;
+                margin-top: 30px;            
             }
         }
-        header {
-            display: block;
-        }
-        .flexbin {
-            display: flex;
-            overflow: hidden;
-            flex-wrap: wrap;
-            margin: -2.5px;
+        .hero,
+        .popup-opening {
+            background-size: 300px;
 
-            &:after {
-                content: '';
-                flex-grow: 999999999;
-                min-width: 150px;
-                height: 0
-            }
-            & > * {
-                position: relative;
-                display: block;
-                height: 150px;
-                margin: 2.5px;
-                flex-grow: 1;
-
-                & > img {
-                    height: 150px;
-                    object-fit: cover;
-                    max-width: 100%;
-                    min-width: 100%;
-                    vertical-align: bottom;
+            .ring-hero {
+                img {
+                    width: 80px;
+                }
+                figcaption {
+                    @include subTitle(25px, $mainColor);
+                    margin: 10px auto 40px;
                 }
             }
-            &.flexbin-margin {
-                margin: 2.5px
+            h1.title {
+                margin-top: 0;
+                font-size: 45px;
+                margin-bottom: 70px;
             }
-        }
-        .protocols, .story{
-            padding: 50px 10px 20px;
-        }
-        h1 {
-            line-height: 1.5;
-        }
-        section {
-            padding: 50px 0 20px;
-        }
-        #control-music {
-            bottom: 100px;
-            right: 15px;
-            left: unset;
-        }
-        .divider-wrapper {
-            margin: 15px auto;
-
-            &.teaser-divider {
-                margin: 50px auto 0;
+            picture img{
+                max-width: 300px;
             }
-        }
-        .sub-title {
-            line-height: 1.3;
-            margin: 20px 0 40px;
-        }
-        .center-column > .header, 
-        .center-column > .content{
-            width: 90%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .card {
-            width: 80%;
-            max-width: 400px;
-            padding: 18px 18px 65px;
-        
-            .border-card {
-                &.reverse {
-                    &::before {
-                        right: 18px;
-                        bottom: 18px;
-                    }
-                    &::after {
-                        right: 23px;
-                        bottom: 18px;
-                    }
-        
-                }
-            }
-        
-            .card-content {        
-                h1 {
-                    @include titlelatin(25px, $greyColor);
-                    margin-top: 55px;
-                }
-        
-                h2 {
-                    @include subTitle(20px, capitalize);
-                }
-                .details {
-                    padding: 0 5px;
-                }
-            }
-        
-        }
-        ._single {
-            padding: 85px 0;
-            .pmd-ornament-flower {
-                .orm-pmd__flower-01 {
-                    @include ornFlower(50%, 50%, 25px);
-                }
-        
-                .orm-pmd__flower-02 {
-                    @include ornFlower(250px, 0, 480px);
-                    transform: rotate(300deg);
-                }
-            }
-        }  
-        ._twin {
-            .content {
-                flex-direction: column;
-                gap: 15px;
-            }
-            .card {
-                width: 90%;
-                padding-bottom: 40px;
-            }
-            .pmd-ornament-flower {
-                height: 100%;
-                max-width: 400px;            
-        
-                .orm-pmd__flower-01 {
-                    @include ornFlower(100%, 0, 45px);
-                    max-width: 450px;
-                }
-                .orm-pmd__flower-03 {
-                    @include ornFlower(170px, 10%, 51%);
-                    transform: rotate(60deg);
-
-                }
-                .orm-pmd__flower-02 {
-                    @include ornFlower(75%, 23%, 28%);
-                }
-            }
-        }
-        .hero {
-            padding-bottom: 100px;
-
             .countdown {
-                width: 90%;
-                margin: 70px auto 0;
-
-                .counter {
-                    padding: 15px 5px;
-                    margin: 0;
-                    width: 22%;
-
+                gap: 5%;
+                margin-bottom: 60px;
+                grid-template-columns: 20% 20% 20% 20%;
+                    
+                li {   
+                    border-radius: 10px;     
                     .time {
-                        font-size: 35px;
+                        @include titlelatin(40px, #fff);
                     }
                     .desc {
-                        font-size: 10px;
-                        margin: 5px 0 2px;
+                        font-size: 12px;
+                        margin: 15px 0 2px;
                     }
                 }
+            }
+            .subtitle-date {
+                @include subTitle(18px, $blackColor);
+                margin-bottom: 70px;
             }
         }
-        .couple .content {
-            grid-template-columns: 100%;
 
-            .grid-profile__photo  {
-                &.groom {
-                    grid-row: 1 / 2;
-                }
+        .ar-rum {
+            h1 {
+                font-size: 23px;
+                margin: 20px auto 30px;
             }
-            .grid-profile__name {
-                padding: 30px;
-            }
-        }
-        .date-maps {
-            iframe {
-                max-height: 400px;
+            .sub-title {
+                font-size: 15px;
+                margin: 30px auto 20px;
             }
         }
-        .story {
-            .content {
-                grid-template-columns: 100%;
-                padding: 50px 0;
-
-                & > div:nth-child(odd)::after {
-                    right: unset;
-                    left: -11px;
-                }
-
-                h1 {
-                    margin-top: 10px;
-                }
-
-                .story-content  {
-                    padding: 0px 60px 50px 35px;
-                    text-align: left;
-                    border-left: 3px solid $greenAlt;
-                    border-right: 0;
-                    &::after {
-                        display: none;
-                    }
-                }
-                .story__photo {
-                    border-left: 3px solid $greenAlt;
-                    border-right: 0;
-
-                    &.first {
-                        grid-row: 1 / 2;
-                        border-right: 0;
-                    }
-                    &.third {
-                        grid-row: 5 / 6;
-                    }
-                    &::before{
-                        top: -25px;
-                        @include dividerRight(right, $greenAlt);
-                        left: 35px;
-                    }
-
-                    &::after {
-                        @include bullet(unset);
-                        left: -12px;
-                    }
-                }
-                .closed::after{
-                    left: -8px !important;
-                }
-            }
-        }
-        .gallery {
-            .teaser {
-                width: 90%;
-
-                iframe {
-                    max-height: 300px;
-                }
-            }
-        } 
-        .gift{
-            padding-bottom: 100px;
-
-            &._twin .pmd-ornament-flower .orm-pmd__flower-03{
-                top: 80%;
-            }
-            .content .details p {
-                font-size: 16px;
-            }
-        }
-        .protocols {
+        .couple {
             .content {
                 grid-template-columns: 50% 50%;
-                padding: 30px 0;
-
-                figure {
-                    padding: 0 20px 10px;
-
-                    img {
-                        width: 100%;
-                        max-width: 150px;
-                    }
-
-                    figcaption {
-                        margin-top: 10px;
-                    }
-                }
-            }
-        } 
-        .ar-rum {
-            margin-top: 30px;
-        }
-        .greeting .content {
-            .form-greeting {
-                padding: 45px 0;
-
-                .form-group {
-                    width: 100%;
-                }
-            }
-            .greeting-list ul li {
-                margin-bottom: 5px;
-
-                h2 {
-                    font-size: 18px;
-                }
-                .greetcheck  {
-                    font-size: 10px;
+                row-gap: 60px;
+                
+                .grid-profile__name {
                     text-align: left;
-                    padding: 5px 0;
-                    border-bottom: 1px solid #fff;
+                    padding:0 25px;
+        
+                    &.bride {
+                        grid-row: 2 /3; 
+                        text-align: right;
+
+                        p {
+                            text-align: right;
+                        }
+                    }
+        
+                    h1 {
+                        @include mainTitle(25px);
+                        margin: 20px 0;
+                    }
+        
+                    p {
+                        text-align: left;
+                        font-size: 14px;
+                        margin: 10px 0;
+                    }
+        
+                    .social-icons {
+                        margin:15px 0;
+        
+                        li a img{
+                            vertical-align: middle;
+                        }
+                    }
+                }
+                .grid-profile__photo {
+                    img {
+                        max-width: 400px;
+                        width: 100%;
+                    }
                 }
             }
         }
-        .minicard {
-            .pmd-ornament-flower,
+        .date-maps {        
+            .content {
+                flex-direction: row;
+                gap: 35px;
+                max-width: 830px;
+            }
             .card {
-                max-width: 250px;
-            }
-            .pmd-ornament-flower {
-                .orm-pmd__flower-02 {
-                    top: 280px;
-                    left: -8px;
+                padding: 20px 20px 30px;
+
+
+                h1 {
+                    font-size: 30px;
                 }
-                .orm-pmd__flower-01 {
-                    left: 55%;
-                    top: 0px;
+                .card-content .details {
+                    padding: 0 15px;
+                    p {
+                        font-size: 15px;
+                    }
+                    figure + p {
+                        font-size: 14px;
+                    }
+                }
+                .border-card.reverse {
+
+                    &::before {
+                        right: 20px;
+                        bottom: 25px;
+                    }
+                    &::after {
+                        right: 25px;
+                        bottom: 25px;
+                    }
+                }
+
+            }
+            
+            iframe {
+                max-height: 500px;
+            }
+            .pmday-button {
+                margin-bottom: 65px;
+            }
+        }
+        figure.fullwidth {
+            margin-top: 120px;
+        }
+
+        .protocols {
+            .content {
+                figure {
+                    img  {
+                        max-width: 160px;
+                    }
+        
+                    figcaption {
+                        font-size: 15px;
+                    }
                 }
             }
-            .thanks, .names {
-                font-size: 55px;
-                margin-bottom: 0;
+        }
+        .greeting {
+            .content {
+                background-color: #fff;
+                box-shadow: 5px 10px 35px 5px rgba(0, 0, 0, 0.1);
+        
+                .form-greeting {
+                    width: 85%;
+                    margin: auto;
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: row;
+                    gap: 30px;
+                    padding: 45px 0;
+        
+                    .form-group {
+                        width: 100%;
+        
+                        &.prayer-wrapper {
+                            width: 100%;
+                        }
+                    }
+                    button {
+                        width: 100%;
+                        border: 0;
+                        color: #fff;
+                        height: 42px;
+                    }
+                }
+        
+                .greeting-list {
+                    ul {
+                        width: 100%;
+        
+                        li {
+        
+                            h2 {
+                                font-size: 20px;
+                            }
+                            .greetcheck {
+                                font-size: 11px;
+                                text-align: right;
+                                border: 0;
+                                padding: 0;
+                            }
+                            .greettext {
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .prefooter {
+            background-size: 10%;
+
+            img {
+                width: 250px;
+            }
+            h1 {
+                font-size: 50px;
+            }
+            p {
+                margin: 50px auto;
+                max-width: 750px;
             }
         }
         footer {
-            padding-bottom: 100px;
+            padding: 30px 15px;
+            * {
+                font-size: 15px;
+            }
+        }
+        #control-music {
+            width: 50px;
+            height: 50px;
+            right: 30px;
 
-            *{
-                font-size: 12px;
+            &::after{
+                width: 12px;
+                height: 27px;
             }
         }
     }

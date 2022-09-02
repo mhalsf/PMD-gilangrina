@@ -1,8 +1,5 @@
-// Gallery
-lightGallery(document.getElementById('lightGallery'), {
-    thumbnail: true,
-});
-
+// AOS
+AOS.init();
 
 // Music
 var music = $("#musicPlayer")[0],
@@ -29,10 +26,10 @@ var urlParams = new URLSearchParams(window.location.search),
 
 
 // Open popup
-$('#opening .guest').click(function(){
+$('#opening button').click(function(){
     $("#opening").hide();
     $("body").removeClass("fixed-body");
-    music.play();
+  music.play();
 });
 
 // ============================== COUNTER ============================= //

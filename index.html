@@ -3,47 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- css -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dist/vendor/css/aos.css">
     <link rel="stylesheet" href="dist/css/planmyday.css">
-    <link rel="stylesheet" href="dist/vendor/lightgallery/css/lightgallery.min.css">
-    <link rel="stylesheet" href="dist/vendor/lightgallery/css/lightgallery-bundle.min.css">
-    <title>Raffi &amp; Nagita</title>
+    <title>The Weeding Of Ratu &amp; Galuh</title>
 </head>
-<body class="plan-my-day fixed-body">
+<body class="plan-my-day ">
     <div class="popup-opening" id="opening">
-        <div class="header" role="header">
-            <img src="src/images/icons/ring.svg" alt="ring" width="80" >
-            <h1 class="title">The Wedding Of</h1>
-        </div>
-        <div class="_single minicard" role="aside">
-            <div class="card" role="aside">
-                <span class="border-card"></span>
+        <div class="center-content">
+            <figure class="ring-hero">
+                <img src="src/images/icons/ring.svg" width="60" alt="ring">
+                <figcaption>The Wedding Of</figcaption>
+            </figure>
 
-                <div class="card-content">
-                    <picture>
-                        <img src="src/images/galleries/pre-footer.png" alt="pre-footer">
-                    </picture>
-                </div>
-                
-                <span class="border-card reverse"></span>
-            </div>
-            <div class="pmd-ornament-flower">
-                <img class="orm-pmd__flower-01" src="src/images/ornaments/pmday_flower-01.png" alt="ornament flower 1">
-                <img class="orm-pmd__flower-02" src="src/images/ornaments/pmday_flower-02.png" alt="ornament flower 1">
-            </div>
+            <picture>
+                <img src="src/images/profile/couple.svg" alt="couple">
+            </picture>
+            
+            <h1 class="title brides-name">Ratu &amp; Galuh</h1>
 
-            <h1 class="names">Gabriel & Caleb</h1>
-        </div>
-        <div class="guest">
-            <p>Kepada Bapak/Ibu/Saudara/i</p>
-            <h2>Dwinny Puspa DS</h2>
-            <p>Kami Mengundang anda Untuk hadir Di Acara Pernikahan Kami.</p>
-            <button class="pmday-button">
-                <figure>
-                    <img src="src/images/icons/envelope.svg" width="15" alt="envelope icon">
-                    <figcaption>BUKA UNDANGAN</figcaption>
-                </figure>    
-            </button>
+            <p>Kepada Bapak/Ibu dan Saudara/i :</p>
+            <h2>Chicco Jerikho</h2>
+            <p>Tanpa mengurangi rasa hormat. Kami mengundang Bapak/Ibu dan Saudara/i  untuk menghadiri acara pernikahan kami:</p>
+            <button class="pmday-button">BUKA UNDANGAN</button>
         </div>
     </div>
     <header>
@@ -70,13 +52,6 @@
                         </figure>
                     </a>
                 </li>
-                <li class="menu-list _galleries">
-                    <a href="#gallery">
-                        <figure>
-                                <img src="src/images/icons/pictures.svg" width="30" alt="menu galleries">
-                        </figure>
-                    </a>
-                </li>
                 <li class="menu-list _greeting">
                     <a href="#greeting">
                         <figure>
@@ -91,13 +66,16 @@
         <!-- HERO -->
         <section class="hero" id="hero">
             <div class="center-content">
-                <h1 class="title brides-name">Gabriel & Caleb</h1>
+                <figure class="ring-hero">
+                    <img src="src/images/icons/ring.svg" width="60" alt="ring">
+                    <figcaption>The Wedding Of</figcaption>
+                </figure>
 
-                <div class="divider-wrapper white">
-                    <span class="divider left"></span>
-                    <p>10.09.2023</p>
-                    <span class="divider right"></span>
-                </div>
+                <picture>
+                    <img src="src/images/profile/couple.svg" alt="couple">
+                </picture>
+                
+                <h1 class="title brides-name">Ratu &amp; Galuh</h1>
 
                 <ul class="countdown" id="countdown" aria-label="countdown">
                     <li class="counter" id="days">
@@ -117,121 +95,80 @@
                         <p class="desc">seconds</p>
                     </li>
                 </ul>
+
+                <p class="subtitle-date">Sabtu, 10 September 2022</p>
             </div>
         </section>
-        
-        <!-- SAVE THE DATE -->
-        <section class="save-date _single" id="save-date">
-            <div class="card" role="aside">
-                <span class="border-card"></span>
 
-                <div class="card-content">
-                    <h1 class="title">Save the Date</h1>
-                    
-                    <div class="divider-wrapper">
-                        <span class="divider left"></span>
-                        <p>
-                            <img src="./src/images/icons/heart-filled.svg" alt=" " width="10" >
-                            <img src="./src/images/icons/heart-filled.svg" alt=" " width="10" >
-                            <img src="./src/images/icons/heart-filled.svg" alt=" " width="10" >
-                        </p>
-                        <span class="divider right"></span>
-                    </div>
-
-                    <h2 class="brides-name">Gabriel & Caleb</h2>
-                    
-                    <div class="details">
-                        <p>Saturday, 10 September 2023</p>
-                        <p>7.00 PM</p>
-                        <p>Grand Aston Yogyakarta</p>
-                    </div>
-
-
-                    <a target="_blank" role="button" href="https://calendar.google.com/event?action=TEMPLATE&tmeid=MXRsaTF1MHNvZmxycnFvaW5iaDZkOXJrYXYgbXVoYW1tYWRhbGlzb2Z5YW4ubWFpbEBt&tmsrc=muhammadalisofyan.mail%40gmail.com" class="pmday-button">
-                        <figure>
-                            <img src="src/images/icons/calendar.svg" width="20" alt="calendar icon">
-                            <figcaption>Add to Calendar</figcaption>
-                        </figure>
-                    </a>
-                </div>
+        <!-- QS. AR-RUM -->
+        <section class="ar-rum center-column" id="ar-rum">
+            <div class="header" role="header">
+                <h1 class="title" data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="400">وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا لِّتَسْكُنُوْٓا اِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَّوَدَّةً وَّرَحْمَةً ۗاِنَّ فِيْ ذٰلِكَ لَاٰيٰتٍ لِّقَوْمٍ يَّتَفَكَّرُوْنَ</h1>
                 
-                <span class="border-card reverse"></span>
-            </div>
-            <div class="pmd-ornament-flower">
-                <img class="orm-pmd__flower-01" src="src/images/ornaments/pmday_flower-01.png" alt="ornament flower 1">
-                <img class="orm-pmd__flower-02" src="src/images/ornaments/pmday_flower-02.png" alt="ornament flower 1">
+                <div class="divider-wrapper white" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="250">
+                    <span class="divider left"></span>
+                    <p>
+                        <img src="./src/images/icons/heart.svg" alt=" " width="12" >
+                        <img src="./src/images/icons/heart.svg" alt=" " width="12" >
+                        <img src="./src/images/icons/heart.svg" alt=" " width="12" >
+                    </p>
+                    <span class="divider right"></span>
+                </div>
+
+                <p class="sub-title" data-aos="zoom-out-up" data-aos-duration="1000" data-aos-delay="600">Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.
+                (Q.S Ar Rum : 21)</p>
             </div>
         </section>
 
         <!-- THE COUPLE -->
         <section class="couple center-column" id="profile">
             <div class="header" role="header">
-                <h1 class="title">THE COUPLE</h1>
+                <h1 class="title" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="600">Yang Berbahagia</h1>
                 
-                <div class="divider-wrapper">
+                <div class="divider-wrapper" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="250">
                     <span class="divider left"></span>
                     <p>
-                        <img src="./src/images/icons/heart-filled.svg" alt=" " width="12" >
-                        <img src="./src/images/icons/heart-filled.svg" alt=" " width="12" >
-                        <img src="./src/images/icons/heart-filled.svg" alt=" " width="12" >
+                        <img src="./src/images/icons/heart.svg" alt=" " width="12" >
+                        <img src="./src/images/icons/heart.svg" alt=" " width="12" >
+                        <img src="./src/images/icons/heart.svg" alt=" " width="12" >
                     </p>
                     <span class="divider right"></span>
                 </div>
 
-                <p class="sub-title">Assalamu'alaikum Warahmatullahi Wabarakatuh <br>
+                <p class="sub-title" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="600">Assalamu'alaikum Warahmatullahi Wabarakatuh <br>
                     Dengan memohon rahmat dan ridho kepada Allah SWT, kami bermaksud menyelenggarakan pernikahan kami.
                 </p>
             </div>
 
             <div class="content" role="aside">
+                <div class="grid-profile__photo groom" data-aos="zoom-out-right" data-aos-duration="1000" data-aos-delay="500">
+                    <picture>
+                        <img src="src/images/profile/groom.svg" alt="Profile Groom">
+                    </picture>
+                </div>
                 <div class="grid-profile__name groom">
-                    <h1 class="Michael">Michael Caleb</h1>
+                    <h1 class="groom-name" data-aos="zoom-out-right" data-aos-duration="1000" data-aos-delay="700">Galuh Pratama</h1>
 
-                    <div class="divider-wrapper">
-                        <span class="divider left"></span>
-                    </div>
-                    <p>Lahir di Yogyakarta, 24 Agustus 1996</p>
-                    <p>Putra Pertama dari Bapak H. Ir Raffi Ahmad dan Ibu H. Nagita Slavina.</p>
+                    <p data-aos="zoom-out-right" data-aos-duration="1000" data-aos-delay="900">Putra Pertama dari Bapak H. Ir Raffi Ahmad dan Ibu H. Nagita Slavina.</p>
 
-                    <ul class="social-icons">
+                    <ul class="social-icons" data-aos="zoom-out-right" data-aos-duration="1000" data-aos-delay="1000">
                         <li>
-                            <a href="#"><img src="src/images/icons/instagram.svg" alt="instagram"></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="src/images/icons/facebook.svg" alt="facebook"></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="src/images/icons/twitter.svg" alt="twitter"></a>
+                            <a href="https://www.instagram.com/"><img src="src/images/icons/instagram.svg" alt="instagram">galuh.keren</a>
                         </li>
                     </ul>
                 </div>
-                <div class="grid-profile__photo groom">
+                <div class="grid-profile__photo bride" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="500">
                     <picture>
-                        <img src="src/images/galleries/profile_men.png" alt="Profile Michael">
-                    </picture>
-                </div>
-                <div class="grid-profile__photo bride">
-                    <picture>
-                        <img src="src/images/galleries/profile_women.png" alt="Profile Gabriela">
+                        <img src="src/images/profile/bride.svg" alt="Profile Bride">
                     </picture>
                 </div>  
                 <div class="grid-profile__name bride">
-                    <h1 class="Gabriela">Gabriela Bellaluna</h1>
+                    <h1 class="bride-name" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="700">Ratu Larona</h1>
 
-                    <div class="divider-wrapper">
-                        <span class="divider left"></span>
-                    </div>
-                    <p>Lahir di Jakarta, 1 Oktober 1997</p>
-                    <p>Putri Ketiga dari Bapak Doctor Strange dan Ibu Wanda Maximoff</p>
-                    <ul class="social-icons">
+                    <p data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="900">Putri Ketiga dari Bapak Doctor Strange dan Ibu Wanda Maximoff</p>
+                    <ul class="social-icons" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="1000">
                         <li>
-                            <a href="#"><img src="src/images/icons/instagram.svg" alt="instagram"></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="src/images/icons/facebook.svg" alt="facebook"></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="src/images/icons/twitter.svg" alt="twitter"></a>
+                            <a href="https://www.instagram.com/"><img src="src/images/icons/instagram.svg" alt="instagram"> laronaratu97</a>
                         </li>
                     </ul>
                 </div>
@@ -241,34 +178,34 @@
         <!-- DATE AND MAPS -->
         <section class="date-maps center-column _twin" id="date-maps">
             <div class="header" role="header">
-                <h1 class="title">CELEBRATE OUR LOVE</h1>
+                <h1 class="title" data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="400">Pesta Pernikahan</h1>
                 
-                <div class="divider-wrapper">
+                <div class="divider-wrapper" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="250">
                     <span class="divider left"></span>
                     <p>
-                        <img src="./src/images/icons/heart-filled.svg" alt=" " width="12" >
-                        <img src="./src/images/icons/heart-filled.svg" alt=" " width="12" >
-                        <img src="./src/images/icons/heart-filled.svg" alt=" " width="12" >
+                        <img src="./src/images/icons/heart.svg" alt=" " width="12" >
+                        <img src="./src/images/icons/heart.svg" alt=" " width="12" >
+                        <img src="./src/images/icons/heart.svg" alt=" " width="12" >
                     </p>
                     <span class="divider right"></span>
                 </div>
 
-                <p class="sub-title">InsyaAllah acara akan dilaksanakan pada</p>
+                <p class="sub-title" data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="400">InsyaAllah acara akan dilaksanakan pada</p>
             </div>
             <div class="content" role="aside">
                 <!-- Akad -->
-                <div class="card">
+                <div class="card" data-aos="fade-down-right" data-aos-duration="1000" data-aos-delay="600">
                     <span class="border-card"></span>
 
-                    <div class="card-content">
+                    <div class="card-content" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1000">
                         <h1 class="title">Akad Nikah</h1>
                         
                         <div class="divider-wrapper">
                             <span class="divider left"></span>
                             <p>
-                                <img src="./src/images/icons/heart-filled.svg" alt=" " width="10" >
-                                <img src="./src/images/icons/heart-filled.svg" alt=" " width="10" >
-                                <img src="./src/images/icons/heart-filled.svg" alt=" " width="10" >
+                                <img src="./src/images/icons/heart.svg" alt=" " width="10" >
+                                <img src="./src/images/icons/heart.svg" alt=" " width="10" >
+                                <img src="./src/images/icons/heart.svg" alt=" " width="10" >
                             </p>
                             <span class="divider right"></span>
                         </div>
@@ -276,25 +213,29 @@
                         <div class="details">
                             <p>Saturday, 10 September 2023</p>
                             <p>7.00 AM</p>
-                            <p>Grand Aston Yogyakarta</p>
+                            <figure>
+                                <img src="src/images/icons/pin.svg" width="20" alt="location icon">
+                                <figcaption>Grand Aston Yogyakarta</figcaption>
+                            </figure>
+                            <p>Klitren, Kec. Gondokusuman, Kota Yogyakarta, Daerah Istimewa Yogyakarta</p>
                         </div>
                     </div>
                     
                     <span class="border-card reverse"></span>
                 </div>
                 <!-- Reception -->
-                <div class="card">
+                <div class="card" data-aos="fade-down-left" data-aos-duration="1000" data-aos-delay="600">
                     <span class="border-card"></span>
 
-                    <div class="card-content">
+                    <div class="card-content" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1000">
                         <h1 class="title">Resepsi</h1>
                         
                         <div class="divider-wrapper">
                             <span class="divider left"></span>
                             <p>
-                                <img src="./src/images/icons/heart-filled.svg" alt=" " width="10" >
-                                <img src="./src/images/icons/heart-filled.svg" alt=" " width="10" >
-                                <img src="./src/images/icons/heart-filled.svg" alt=" " width="10" >
+                                <img src="./src/images/icons/heart.svg" alt=" " width="10" >
+                                <img src="./src/images/icons/heart.svg" alt=" " width="10" >
+                                <img src="./src/images/icons/heart.svg" alt=" " width="10" >
                             </p>
                             <span class="divider right"></span>
                         </div>
@@ -302,26 +243,23 @@
                         <div class="details">
                             <p>Saturday, 10 September 2023</p>
                             <p>10.00 - 12.00 AM</p>
-                            <p>Jogja Expo Center</p>
+                            <figure>
+                                <img src="src/images/icons/pin.svg" width="20" alt="location icon">
+                                <figcaption>Grand Aston Yogyakarta</figcaption>
+                            </figure>
+                            <p>Klitren, Kec. Gondokusuman, Kota Yogyakarta, Daerah Istimewa Yogyakarta</p>
                         </div>
                     </div>
                     
                     <span class="border-card reverse"></span>
                 </div>
             </div>
-
-            <div class="pmd-ornament-flower">
-                <img class="orm-pmd__flower-01" src="src/images/ornaments/pmday_flower-02.png" alt="ornament flower 2">
-                <img class="orm-pmd__flower-02" src="src/images/ornaments/pmday_flower-03.png" alt="ornament flower 3">
-                <img class="orm-pmd__flower-03" src="src/images/ornaments/pmday_flower-04.png" alt="ornament flower 4">
-            </div>
-
             
-            <figure class="maps fullwidth">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.908606796877!2d110.4021658656764!3d-7.799500329583258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a575ddde6c091%3A0x89d72c5fdecbbc18!2sJogja%20Expo%20Center%2C%20Jl.%20Raya%20Janti%20Jl.%20Wonocatur%2C%20Wonocatur%2C%20Banguntapan%2C%20Kec.%20Banguntapan%2C%20Kabupaten%20Bantul%2C%20Daerah%20Istimewa%20Yogyakarta%2055198!5e0!3m2!1sid!2sid!4v1660921844616!5m2!1sid!2sid" width="600" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <figure class="maps fullwidth" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="600">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.070392513885!2d110.37763163113816!3d-7.782361461424934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a59cc52d2d1a9%3A0xcad36bd3c8ab3502!2sGrand%20Aston%20Yogyakarta%20Hotel%2C%20Klitren%2C%20Kec.%20Gondokusuman%2C%20Kota%20Yogyakarta%2C%20Daerah%20Istimewa%20Yogyakarta!5e0!3m2!1sid!2sid!4v1661676833183!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </figure>
 
-            <a target="_blank" role="button" href="https://g.page/jogjaexpocenter?share" class="pmday-button">
+            <a target="_blank" role="button" href="https://goo.gl/maps/CrQwZyG8zmL9zgU17" class="pmday-button" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="700">
                 <figure>
                     <img src="src/images/icons/pin.svg" width="20" alt="location icon">
                     <figcaption>SEE LOCATION</figcaption>
@@ -330,283 +268,69 @@
                     
         </section>
 
-        <!-- STORY -->
-        <section class="story center-column" id="story">
-            <div class="header" role="header">
-                <h1 class="title">HOW IT HAPPENED</h1>
-                
-                <div class="divider-wrapper">
-                    <span class="divider left"></span>
-                    <p>
-                        <img src="./src/images/icons/heart-filled.svg" alt=" " width="12" >
-                        <img src="./src/images/icons/heart-filled.svg" alt=" " width="12" >
-                        <img src="./src/images/icons/heart-filled.svg" alt=" " width="12" >
-                    </p>
-                    <span class="divider right"></span>
-                </div>
-
-                <p class="sub-title">Cerita perjalanan kisah kami</p>
-            </div>
-
-
-            <!-- CONTENT STORY -->
-            <div class="content" role="aside">
-                <div class="story-content _left">
-                    <h1 class="title">How we meet</h1>
-                    <h2 class="subtitle">One Day in Yogyakarta</h2>
-                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-                </div>
-                <div class="story__photo first">
-                    <picture>
-                        <img src="src/images/icons/pmd_story-01.png" alt="PMD Story 01">
-                    </picture>
-                </div>
-                <div class="story__photo second">
-                    <picture>
-                        <img src="src/images/icons/pmd_story-02.png" alt="PMD Story 02">
-                    </picture>
-                </div>  
-                <div class="story-content _right">
-                    <h1 class="title">Firts date</h1>
-                    <h2 class="subtitle">December 9, 2019</h2>
-                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-                </div>
-                <div class="story-content _left">
-                    <h1 class="title">The Engagement</h1>
-                    <h2 class="subtitle">She Said Yes</h2>
-                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-                </div>
-                <div class="story__photo third">
-                    <picture>
-                        <img src="src/images/icons/pmd_story-03.png" alt="PMD Story 03">
-                    </picture>
-                </div>
-                <div class="closed"></div>
-            </div>
-        </section>
-
-        <!-- Gallery -->
-        <section class="gallery center-column" id="gallery">
-            <div class="header" role="header">
-                <h1 class="title">OUR MOMENTS</h1>
-                
-                <div class="divider-wrapper">
-                    <span class="divider left"></span>
-                    <p>
-                        <img src="./src/images/icons/heart-filled.svg" alt=" " width="12" >
-                        <img src="./src/images/icons/heart-filled.svg" alt=" " width="12" >
-                        <img src="./src/images/icons/heart-filled.svg" alt=" " width="12" >
-                    </p>
-                    <span class="divider right"></span>
-                </div>
-
-                <p class="sub-title">Silakan klik foto untuk memperbesar tampilan</p>
-            </div>
-
-            <div class="content flexbin" id="lightGallery" role="aside" lg-uid="lg0">
-                <a href="src/images/galleries/thumbnails/planmyday01.png" target="_blank">
-                    <img src="src/images/galleries/thumbnails/planmyday01.png" alt="Gabriel & Caleb">
-                </a>
-                <a href="src/images/galleries/thumbnails/planmyday02.png" target="_blank">
-                    <img src="src/images/galleries/thumbnails/planmyday02.png" alt="Gabriel & Caleb">
-                </a>
-                <a href="src/images/galleries/thumbnails/planmyday03.png" target="_blank">
-                    <img src="src/images/galleries/thumbnails/planmyday03.png" alt="Gabriel & Caleb">
-                </a>
-                <a href="src/images/galleries/thumbnails/planmyday04.png" target="_blank">
-                    <img src="src/images/galleries/thumbnails/planmyday04.png" alt="Gabriel & Caleb">
-                </a>
-                <a href="src/images/galleries/thumbnails/planmyday05.png" target="_blank">
-                    <img src="src/images/galleries/thumbnails/planmyday05.png" alt="Gabriel & Caleb">
-                </a>
-                <a href="src/images/galleries/thumbnails/planmyday06.png" target="_blank">
-                    <img src="src/images/galleries/thumbnails/planmyday06.png" alt="Gabriel & Caleb">
-                </a>
-                <a href="src/images/galleries/thumbnails/planmyday07.png" target="_blank">
-                    <img src="src/images/galleries/thumbnails/planmyday07.png" alt="Gabriel & Caleb">
-                </a>
-            </div>
-            <div class="divider-wrapper teaser-divider">
-                <span class="divider left"></span>
-                <p>TEASER</p>
-                <span class="divider right"></span>
-            </div>
-            <figure class="teaser fullwidth">
-                <iframe width="600" height="500" src="https://www.youtube.com/embed/oY8pudPeLCk" title="Teaser Prewedding" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </figure>
-                    
-        </section>
-
-        <!-- GIFT -->
-        <section class="gift center-column _twin" id="gift">
-            <div class="header" role="header">
-                <h1 class="title">WEDDING GIFT</h1>
-                
-                <div class="divider-wrapper">
-                    <span class="divider left"></span>
-                    <p>
-                        <img src="./src/images/icons/heart-filled.svg" alt=" " width="12" >
-                        <img src="./src/images/icons/heart-filled.svg" alt=" " width="12" >
-                        <img src="./src/images/icons/heart-filled.svg" alt=" " width="12" >
-                    </p>
-                    <span class="divider right"></span>
-                </div>
-
-                <p class="sub-title">Doa dan kedatangan dari anda sangat berharga bagi kami, tetapi bagaimanapun juga jika anda ingin mengirimkan tanda sayang untuk kami, kami menyediakan amplop digital untuk anda</p>
-            </div>
-            <div class="content" role="aside">
-                <!-- GIFT -->
-                <div class="card">
-                    <span class="border-card"></span>
-
-                    <div class="card-content">
-                        <figure class="icon-title">
-                            <img src="src/images/icons/gift.svg" width="50" alt="gift icon">
-                        </figure>
-                        
-                        <div class="divider-wrapper">
-                            <span class="divider left"></span>
-                            <p>
-                                <img src="./src/images/icons/heart-filled.svg" alt=" " width="10" >
-                                <img src="./src/images/icons/heart-filled.svg" alt=" " width="10" >
-                                <img src="./src/images/icons/heart-filled.svg" alt=" " width="10" >
-                            </p>
-                            <span class="divider right"></span>
-                        </div>
-                        
-                        <div class="details">
-                            <p>BCA - 15677863763<br>Gabriela Bellaluna</p>
-                            <button class="pmd_copy-btn">Copy Text</button>
-                            <p>BNI - 15677863763<br>Michael Calleb</p>
-                            <button class="pmd_copy-btn">Copy Text</button>
-                        </div>
-                    </div>
-                    
-                    <span class="border-card reverse"></span>
-                </div>
-                <!-- HOME -->
-                <div class="card">
-                    <span class="border-card"></span>
-
-                    <div class="card-content">
-                        <figure class="icon-title">
-                            <img src="src/images/icons/home.svg" width="50" alt="home icon">
-                        </figure>
-                        
-                        <div class="divider-wrapper">
-                            <span class="divider left"></span>
-                            <p>
-                                <img src="./src/images/icons/heart-filled.svg" alt=" " width="10" >
-                                <img src="./src/images/icons/heart-filled.svg" alt=" " width="10" >
-                                <img src="./src/images/icons/heart-filled.svg" alt=" " width="10" >
-                            </p>
-                            <span class="divider right"></span>
-                        </div>
-                        
-                        <div class="details">
-                            <p>Jl. Raya Jogja Solo no. 249</p>
-                            <p>Sleman, Daerah Istimewa Yogyakarta</p>
-                            <br>
-                            <p class="nametag">Michael calleb</p>
-                            <button class="pmd_copy-btn">Copy Text</button>
-                        </div>
-                    </div>
-                    
-                    <span class="border-card reverse"></span>
-                </div>
-            </div>
-
-            <div class="pmd-ornament-flower">
-                <img class="orm-pmd__flower-01" src="src/images/ornaments/pmday_flower-02.png" alt="ornament flower 2">
-                <img class="orm-pmd__flower-02" src="src/images/ornaments/pmday_flower-03.png" alt="ornament flower 3">
-                <img class="orm-pmd__flower-03" src="src/images/ornaments/pmday_flower-04.png" alt="ornament flower 4">
-            </div>
-                    
-        </section>
-
         <!-- PROTOCOLS -->
-        <section class="protocols center-column" id="protocols">
+        <section class="protocols center-column " id="protocols">
             <div class="header" role="header">
-                <h1 class="title">HEALTH PROTOCOLS</h1>
+                <h1 class="title" data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="400">Protokol Kesehatan</h1>
                 
-                <div class="divider-wrapper">
+                <div class="divider-wrapper white" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="250">
                     <span class="divider left"></span>
                     <p>
-                        <img src="./src/images/icons/heart-filled.svg" alt=" " width="12" >
-                        <img src="./src/images/icons/heart-filled.svg" alt=" " width="12" >
-                        <img src="./src/images/icons/heart-filled.svg" alt=" " width="12" >
+                        <img src="./src/images/icons/heart.svg" alt=" " width="12" >
+                        <img src="./src/images/icons/heart.svg" alt=" " width="12" >
+                        <img src="./src/images/icons/heart.svg" alt=" " width="12" >
                     </p>
                     <span class="divider right"></span>
                 </div>
 
-                <p class="sub-title">Diharapkan kepada seluruh tamu undangan untuk mematuhi Protokol Kesehatan</p>
+                <p class="sub-title" data-aos="zoom-out-up" data-aos-duration="1000" data-aos-delay="500">Guna mencegah penyebaran Covid-19, diharapkan bagi tamu undangan untuk mematuhi Protokol Kesehatan di bawah ini :</p>
             </div>
 
             
             <div class="content" role="aside">
-                <figure>
+                <figure data-aos="flip-right" data-aos-duration="1000" data-aos-delay="500">
                     <img src="src/images/icons/pmday_Masker.svg" width="125" alt="Pakai Masker">
                     <figcaption>Gunakan Masker</figcaption>
                 </figure>
-                <figure>
+                <figure data-aos="flip-right" data-aos-duration="1000" data-aos-delay="600">
                     <img src="src/images/icons/pmday_Cuci Tangan.svg" width="125" alt="Cuci Tangan">
                     <figcaption>Mencuci Tangan</figcaption>
                 </figure>
-                <figure>
+                <figure data-aos="flip-right" data-aos-duration="1000" data-aos-delay="700">
                     <img src="src/images/icons/pmday_Jaga Jarak.svg" width="125" alt="Jaga Jarak">
                     <figcaption>Menjaga Jarak</figcaption>
                 </figure>
-                <figure>
+                <figure data-aos="flip-right" data-aos-duration="1000" data-aos-delay="800">
                     <img src="src/images/icons/pmday_Jabat tangan.svg" width="125" alt="Jabat tangan">
                     <figcaption>Tidak Bersalaman</figcaption>
                 </figure>
-                <figure>
+                <figure data-aos="flip-right" data-aos-duration="1000" data-aos-delay="900">
                     <img src="src/images/icons/pmday_Hand Sanitizer.svg" width="125" alt="Hand Sanitizer">
                     <figcaption>Gunakan Handsanitizer</figcaption>
                 </figure>
-                <figure>
+                <figure data-aos="flip-right" data-aos-duration="1000" data-aos-delay="1000">
                     <img src="src/images/icons/pmday_Berkerumun.svg" width="125" alt="Berkerumun">
                     <figcaption>Hindari Kerumunan</figcaption>
                 </figure>
             </div>
         </section>
 
-        <!-- QS. AR-RUM -->
-        <section class="ar-rum center-column" id="ar-rum">
-            <div class="header" role="header">
-                <h1 class="title">وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا لِّتَسْكُنُوْٓا اِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَّوَدَّةً وَّرَحْمَةً ۗاِنَّ فِيْ ذٰلِكَ لَاٰيٰتٍ لِّقَوْمٍ يَّتَفَكَّرُوْنَ</h1>
-                
-                <div class="divider-wrapper white">
-                    <span class="divider left"></span>
-                    <p>
-                        <img src="./src/images/icons/heart-filled.svg" alt=" " width="12" >
-                        <img src="./src/images/icons/heart-filled.svg" alt=" " width="12" >
-                        <img src="./src/images/icons/heart-filled.svg" alt=" " width="12" >
-                    </p>
-                    <span class="divider right"></span>
-                </div>
-
-                <p class="sub-title">Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.
-                (Q.S Ar Rum : 21)</p>
-            </div>
-        </section>
-
         <!-- GREETING -->
         <section class="greeting center-column" id="greeting">
             <div class="header" role="header">
-                <h1 class="title">ARE YOU ATTENDING?</h1>
+                <h1 class="title" data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="400">Kirim Ucapan & Doa</h1>
                 
-                <div class="divider-wrapper">
+                <div class="divider-wrapper" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="250">
                     <span class="divider left"></span>
                     <p>
-                        <img src="./src/images/icons/heart-filled.svg" alt=" " width="12" >
-                        <img src="./src/images/icons/heart-filled.svg" alt=" " width="12" >
-                        <img src="./src/images/icons/heart-filled.svg" alt=" " width="12" >
+                        <img src="./src/images/icons/heart.svg" alt=" " width="12" >
+                        <img src="./src/images/icons/heart.svg" alt=" " width="12" >
+                        <img src="./src/images/icons/heart.svg" alt=" " width="12" >
                     </p>
                     <span class="divider right"></span>
                 </div>
 
-                <p class="sub-title">Berikan Ucapan dan Doa anda untuk kedua mempelai dengan mengisi form dibawah ini</p>
+                <p class="sub-title" data-aos="zoom-out-up" data-aos-duration="1000" data-aos-delay="500">Berikan Ucapan dan Doa anda untuk kedua mempelai dengan mengisi form dibawah ini</p>
             </div>
 
             
@@ -626,7 +350,7 @@
                     <div class="form-group prayer-wrapper">
                         <textarea class="form-control" id="prayersbox" rows="10"></textarea>
                     </div>
-                    <button class="pmday-button" onClick="sendPrayers();">SEND</button>
+                    <button class="pmday-button" onClick="sendPrayers();">KIRIM PESAN</button>
                 </div>
 
                 <div class="greeting-list">
@@ -657,29 +381,19 @@
         </section>
 
         <!-- PRE-FOOTER -->
-        <section class="prefooter _single minicard" id="prefooter">
-            <div class="card" role="aside">
-                <span class="border-card"></span>
+        <section class="prefooter" id="prefooter">
+            <picture data-aos="zoom-in-down" data-aos-duration="1000">
+                <img src="src/images/profile/couple.svg" alt="couple">
+            </picture>
 
-                <div class="card-content">
-                    <picture>
-                        <img src="src/images/galleries/pre-footer.png" alt="pre-footer">
-                    </picture>
-                </div>
-                
-                <span class="border-card reverse"></span>
-            </div>
-            <div class="pmd-ornament-flower">
-                <img class="orm-pmd__flower-01" src="src/images/ornaments/pmday_flower-01.png" alt="ornament flower 1">
-                <img class="orm-pmd__flower-02" src="src/images/ornaments/pmday_flower-02.png" alt="ornament flower 1">
-            </div>
+            <h1 class="thanks" data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="100">Terima Kasih</h1>
 
-            <h1 class="thanks">Thank you</h1>
+            <p class="sub-title" data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="200">Terima kasih atas ucapan dan doa, serta yang berkenan hadir di acara bahagia kami nanti. Semoga kami berdua menjadi sepasang yang saling mencintai sampai tua kelak dan menjadi pasangan yang Allah ridhoi.</p>
         </section>
     </main>
     <!-- MUSIC -->
     <audio id="musicPlayer" autoplay loop playsinline> 
-        <source src="src/audio/sempurna.mp3" type="audio/mp3"> 
+        <source src="src/audio/Train - Marry Me.mp3" type="audio/mp3"> 
         Browser does not support this audio.
     </audio>
     <div class="music" id="control-music">
@@ -691,10 +405,8 @@
         <a href="#">www.planmyday.co.id </a>
     </footer>
     <!-- Scripts -->
-    <script src="dist/vendor/lightgallery/js/jquery-3.4.1.min.js"></script>
-    <script src="dist/vendor/lightgallery/js/lg-thumbnail.min.js"></script>
-    <script src="dist/vendor/lightgallery/js/lg-zoom.min.js"></script>
-    <script src="dist/vendor/lightgallery/js/lightgallery.min.js"></script>
+    <script src="dist/vendor/js/aos.js"></script>
+    <script src="dist/vendor/js/jquery-3.4.1.min.js"></script>
     <script src="src/js/planmyday.js"></script>
 </body>
 </html>
