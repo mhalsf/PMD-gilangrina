@@ -8,7 +8,7 @@ header {
     nav {
         position: fixed;
         z-index: 9;
-        background: $mainColor;
+        background: $secondColor;
         width: 85%;
         left: 0;
         right: 0;
@@ -20,25 +20,25 @@ header {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            padding: 13px 25px;
+            padding: 12px 25px;
             align-items: baseline;
     
             li {
                 display: inline-block;
     
                 img {
-                    height: 30px;
+                    height: 24px;
                     width: auto;
                 }
     
                 &._home img {
-                    height: 33px;
+                    height: 27px;
                 }
                 &._calendar img {
-                    height: 35px;
+                    height: 29px;
                 }
                 &._greeting img{
-                    height: 34px;
+                    height: 28px;
                 }
             }
         }
@@ -58,6 +58,7 @@ header {
     display: block;
     border: 0;
     color: #fff;
+    cursor: pointer;
 
 
     figure {
@@ -85,9 +86,12 @@ figure.fullwidth {
 .divider-wrapper {
     display: table; 
     font-size: 15px;  
-    width: 60%;
+    width: 80%;
     margin: 15px auto;
-    
+
+    img {
+        margin: auto;
+    }
     & > * {
         display: table-cell; position: relative;
     }		
@@ -114,25 +118,6 @@ figure.fullwidth {
             @include dividerRight(left, #C4C4C4);
         }
     }
-    &.white {
-        width: 75%;
-        margin: 40px auto;
-
-        .divider {
-            &.left {
-                @include dividerLeft();
-            }
-    
-            &.right {
-                @include dividerRight();
-            }
-        }
-
-        img {
-            filter: brightness(0) invert(1);
-        }
-    } 
-
 }
 .card {
     width: 100%;
@@ -144,54 +129,27 @@ figure.fullwidth {
     z-index: 1;
     box-shadow: 5px 10px 35px 5px rgba(0, 0, 0, 0.1);
 
-    .border-card {
-        &::before {
-            @include dividerLeft(top, $secondColor);
-            @include dividerCart(80%, 5px);
-            opacity: .5;
-        }
-        &::after {
-            @include dividerRight(right, $secondColor);
-            @include dividerCart(5px, 80%);
-            opacity: .5;
-            margin-left: 5px;
-        }
-        &.reverse {
-            &::before {
-                @include dividerLeft(bottom, $secondColor);
-                right: 15px;
-                bottom: 15px;
-            }
-            &::after {
-                @include dividerRight(left, $secondColor);
-                right: 20px;
-                bottom: 15px;
-            }
-
-        }
-    }
-
     .card-content {
         @include section();
         width: 100%;
         flex-direction: column;
 
         h1 {
-            @include titlelatin(23px, $greyColor);
-            margin-top: 45px;
+            @include titlelatin(30px, $greyColor);
+            margin-top: 25px;
         }
 
         h2 {
-            @include subTitle(22px, capitalize);
+            @include subTitle(14px, capitalize);
             margin: 20px auto;
         }
 
         .details {
             color: $blackColor;
             text-align: center;
-            margin: 15px auto 25px;
+            margin: 5px auto 15px;
             figure {
-                margin: 15px 0 30px;
+                margin: 10px 0 20px;
                 @include section();
                 gap: 5px;
                 flex-direction: row;
@@ -225,8 +183,10 @@ figure.fullwidth {
 .hero,
 .popup-opening {
     @include section();
-    background-image: url("../../src/images/ornaments/pmd_ornflower01.svg"), url("../../src/images/ornaments/pmd_ornflower02.svg");
-    background-position: right bottom, left top;
+    background-image: url("../../dist/images/ornaments/pmd_orn01.svg");
+    background-position: center;
+    background-size: cover;
+
     * {
         text-align: center;
     }
@@ -238,7 +198,7 @@ figure.fullwidth {
             width: 60px;
         }
         figcaption {
-            @include subTitle(16px, $mainColor);
+            @include subTitle(16px, $blackColor);
             letter-spacing: .5px;
             margin: 20px auto;
         }
@@ -248,9 +208,9 @@ figure.fullwidth {
         width: 100%;
     }
     .title {
-        @include titlelatin(22px, $blackColor);
+        @include titlelatin(40px, $blackColor);
         display: block;
-        margin: 22px auto 30px;
+        margin: 30px auto 25px;
         line-height: 1.5;
     }
     .countdown {
@@ -269,19 +229,18 @@ figure.fullwidth {
             border-radius: 5px;
 
             .time {
-                @include titlelatin(22px, #fff);
+                @include titlelatin(30px, #fff);
             }
             .desc {
                 text-transform: uppercase;
                 font-size: 8px;
-                margin: 10px 0 2px;
                 color: #fff;
             }
         }
     }
     .subtitle-date {
         @include subTitle(14px, $blackColor);
-        margin-bottom: 100px;
+        margin-bottom: 50px;
     }
 
 }
@@ -296,8 +255,7 @@ figure.fullwidth {
 .couple {
     padding-bottom: 30px;
     @include section();
-    background-image: url("../../src/images/ornaments/pmd_ornflower01.svg");
-    background-position: right bottom;
+
     .content {
         display: grid;
         grid-template-columns: 100%;
@@ -352,8 +310,9 @@ figure.fullwidth {
     }
 }
 .date-maps {
-    background-image: url("../../src/images/ornaments/pmd_ornflower02.svg");
-    background-position: left center;
+    background-image: url("../../dist/images/ornaments/pmd_orn02.svg");
+    background-position: center;
+    background-size: cover;
     overflow: hidden;
 
     .pmday-button{
@@ -367,7 +326,7 @@ figure.fullwidth {
     .content {
         @include contentFlex();
         flex-direction: column;
-        gap: 15px;
+        gap: 30px;
     }
     .card {
         width: 100%;
@@ -417,7 +376,7 @@ figure.fullwidth {
     }
 }
 .ar-rum {
-    background: url('../../src/images/ornaments/pmd_ornflower02.svg') left bottom no-repeat $bgColor;
+    background: $bgColor;
 
     h1 {
         font-weight: 100;
@@ -431,6 +390,10 @@ figure.fullwidth {
     }
 }
 .greeting {
+    background-image: url("../../dist/images/ornaments/pmd_orn03.svg");
+    background-position: top center;
+    background-size: contain;
+
     .content {
         background-color: #fff;
         box-shadow: 5px 10px 35px 5px rgba(0, 0, 0, 0.1);
@@ -457,6 +420,11 @@ figure.fullwidth {
                 color: #fff;
                 height: 42px;
             }
+            .alert {
+                font-weight: 400;
+                font-size: 12px;
+                color: #d20000;
+            }
         }
 
         .greeting-list {
@@ -466,13 +434,16 @@ figure.fullwidth {
 
             ul {
                 width: 100%;
+                display: flex;
+                flex-direction: column-reverse;
+
 
                 li {
-                    color: #fff;
+                    color: $greyColor;
                     padding: 15px;
                     border-radius: 10px;
                     text-align: left;
-                    background: $greenAlt;
+                    background:$bgColor;
                     margin-bottom: 5px;
 
 
@@ -487,6 +458,22 @@ figure.fullwidth {
                         text-align: left;
                         padding: 5px 0;
                         border-bottom: 1px solid #fff;
+                        &::before {
+                            content:"";
+                            background-image: url("../../dist/images/icons/hadir.svg");
+                            width: 10px;
+                            height: 10px;
+                            display: inline-block;
+                            background-size: cover;
+                            margin-right: 5px;
+                            filter: invert(1);
+                        }
+                        &.Maaf::before {
+                            background-image: url("../../dist/images/icons/tidak-hadir.svg");
+                        }
+                        &.Tahu::before {
+                            background-image: url("../../dist/images/icons/belum-tahu.svg");
+                        }
                     }
                     .greettext {
                         margin: 10px 0;
@@ -500,10 +487,12 @@ figure.fullwidth {
 .prefooter {
     padding-top:0;
     text-align: center;
-    background-image: url("../../src/images/ornaments/pmd_ornflower01.svg");
-    background-position: right center;
+    background-image: url("../../dist/images/ornaments/pmd_orn04.svg");
+    background-position: bottom left;
+    background-size: 370px;
+
     h1 {
-        @include titlelatin(25px, $greyColor);
+        @include titlelatin(30px, $greyColor);
         margin: 25px auto;
     }
     p {
@@ -514,7 +503,7 @@ figure.fullwidth {
 footer {
     padding: 30px 15px 100px;
     text-align: center;
-    background-color: $greenAlt;
+    background-color:$mainColor;
     color: #fff;
 
     * {
@@ -538,16 +527,17 @@ footer {
 
     .center-content {
         width: 70%;
-        color: $mainColor;
+        color: $blackColor;
     }
 
     h1.title {
-        font-size: 25px;
-        color: $mainColor;
+        font-size: 30px;
+        margin: 3vh auto;
+        color: $blackColor;
     }
     p {
         font-size: 13px;
-        margin: 20px 0;
+        margin: 2vh 0;
         line-height: 1.3;
     }
 
@@ -556,7 +546,7 @@ footer {
     }
     button {
         padding: 15px 20px;
-        margin-top: 30px;
+        margin-top: 3vh;
         cursor: pointer;
     }
     picture img {
@@ -605,7 +595,7 @@ footer {
     max-width: 750px;
     margin: auto;
 }
-//  ===================================== MOBILE =========================================== //
+//  ===================================== RESPONSIVE =========================================== //
 .plan-my-day {
     @include desktop {
         input, select, textarea {
@@ -624,10 +614,7 @@ footer {
         .ar-rum,
         .couple,
         .date-maps  {
-            background-size: 15%;
-        }
-        .title {
-            @include mainTitle(30px);
+            background-size: cover;
         }
         .pmday-button {
             font-size: 14px;
@@ -649,7 +636,7 @@ footer {
             }
             p {
                 font-size: 17px;
-                margin: 30px 0;
+                margin: 3vh 0;
             }
         
             h2 {
@@ -662,7 +649,8 @@ footer {
         }
         .hero,
         .popup-opening {
-            background-size: 300px;
+            background-size: cover;
+            background-position: top right;
 
             .ring-hero {
                 img {
@@ -676,7 +664,7 @@ footer {
             h1.title {
                 margin-top: 0;
                 font-size: 45px;
-                margin-bottom: 70px;
+                margin-bottom: 4vh;
             }
             picture img{
                 max-width: 300px;
@@ -689,11 +677,11 @@ footer {
                 li {   
                     border-radius: 10px;     
                     .time {
-                        @include titlelatin(40px, #fff);
+                        @include titlelatin(50px, #fff);
                     }
                     .desc {
                         font-size: 12px;
-                        margin: 15px 0 2px;
+                        margin: 5px 0 2px;
                     }
                 }
             }
@@ -819,6 +807,8 @@ footer {
             }
         }
         .greeting {
+            background-size: cover;
+
             .content {
                 background-color: #fff;
                 box-shadow: 5px 10px 35px 5px rgba(0, 0, 0, 0.1);
@@ -872,7 +862,7 @@ footer {
         }
 
         .prefooter {
-            background-size: 10%;
+            background-size: cover;
 
             img {
                 width: 250px;

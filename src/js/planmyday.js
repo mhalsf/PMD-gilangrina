@@ -64,3 +64,60 @@ var x = setInterval(function() {
     tagAll.text("0");
   }
 }, 1000);
+
+
+
+// Greeting
+const rdb = firebase.database();
+
+let nama = document.getElementById("name"),
+    prayersBox = document.getElementById("prayersbox"),
+    date = document.getElementById("date"),
+    contentPrayers = document.getElementById("contentprayers"),
+    checkAttending = document.getElementById("attending"),
+    alertText = document.getElementById("alert");
+
+// Send
+function sendPrayers(){
+    let data = {
+        "Nama": nama.value,
+        "Tanggal": new Date().toLocaleString(),
+        "Ucapan": prayersBox.value,
+        "Kehadiran": checkAttending.value
+    }
+    var valName = nama.value,
+        valGreet = prayersBox.value;
+
+    if (valName == null || valName == "" || valGreet == null || valGreet == "") {
+        alertText.style.display = 'block';
+
+      return false;
+    }else {
+        alertText.style.display = 'none';
+        rdb.ref("demo").push().set(data);
+    }
+
+
+    nama.value = '',
+    prayersBox.value = '';
+}
+
+// Read
+rdb.ref("demo").orderByChild("Tanggal").on("value", getData);
+
+function getData(prayer) {
+    let card = '';
+
+    prayer.forEach(data => {
+
+        card += `
+            <li>
+                <h2>${data.val().Nama}</h2>
+                <p class="greetcheck ${data.val().Kehadiran}">${data.val().Kehadiran}</p>
+                <p class="greettext">${data.val().Ucapan}</p>
+            </li>
+        `;
+    });
+
+    contentPrayers.innerHTML = card;
+}
